@@ -1,0 +1,22 @@
+[
+  {
+    "content": "分析USDJPY多头的swap收益",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "计算持仓期间的swap累积收益",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "重新评估加入swap后的总收益",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "分析时间对策略的影响",
+    "status": "completed",
+    "id": "4"
+  }
+]

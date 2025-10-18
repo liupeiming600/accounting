@@ -1,0 +1,52 @@
+[
+  {
+    "content": "更新project-structure.md文件，反映PoiTrack项目的实际结构",
+    "status": "pending",
+    "id": "1"
+  },
+  {
+    "content": "完善models.py - 添加Account和Asset数据类",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "实现完整的CRUD操作 - Account相关功能",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "实现完整的CRUD操作 - Asset相关功能",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "实现完整的CRUD操作 - Campaign更新和删除功能",
+    "status": "completed",
+    "id": "5"
+  },
+  {
+    "content": "创建tui.py - Textual TUI仪表板实现",
+    "status": "completed",
+    "id": "6"
+  },
+  {
+    "content": "实现main.py中的CLI命令集",
+    "status": "completed",
+    "id": "7"
+  },
+  {
+    "content": "修复数据库文件名不一致问题",
+    "status": "completed",
+    "id": "8"
+  },
+  {
+    "content": "添加必要的项目配置文件（__init__.py, .gitignore等）",
+    "status": "completed",
+    "id": "9"
+  },
+  {
+    "content": "更新pyproject.toml添加开发依赖",
+    "status": "completed",
+    "id": "10"
+  }
+]

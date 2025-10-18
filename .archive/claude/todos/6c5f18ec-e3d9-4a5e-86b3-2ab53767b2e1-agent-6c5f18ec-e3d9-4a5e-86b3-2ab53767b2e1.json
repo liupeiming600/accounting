@@ -1,0 +1,52 @@
+[
+  {
+    "content": "建立需求文档体系结构",
+    "status": "completed",
+    "id": "doc-1"
+  },
+  {
+    "content": "收集和分析客户需求",
+    "status": "completed",
+    "id": "doc-2"
+  },
+  {
+    "content": "编写功能需求文档(FRD)",
+    "status": "completed",
+    "id": "doc-3"
+  },
+  {
+    "content": "编写技术设计文档(TDD)",
+    "status": "completed",
+    "id": "doc-4"
+  },
+  {
+    "content": "编写API接口文档",
+    "status": "completed",
+    "id": "doc-5"
+  },
+  {
+    "content": "编写数据模型文档",
+    "status": "completed",
+    "id": "doc-6"
+  },
+  {
+    "content": "编写CLI命令体系需求文档",
+    "status": "completed",
+    "id": "core-1"
+  },
+  {
+    "content": "编写TUI仪表板需求文档",
+    "status": "completed",
+    "id": "core-2"
+  },
+  {
+    "content": "编写CRUD完善需求文档",
+    "status": "completed",
+    "id": "core-3"
+  },
+  {
+    "content": "编写开发任务分解文档",
+    "status": "completed",
+    "id": "task-1"
+  }
+]

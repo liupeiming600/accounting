@@ -1,0 +1,27 @@
+[
+  {
+    "content": "将项目名称从FinTrack改为PoiTrack",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "更新CLAUDE.md中的项目名称",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "更新project-structure.md中的项目名称",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "检查docs目录下文档的项目名称",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "重命名fintrack文件夹为poitrack",
+    "status": "completed",
+    "id": "5"
+  }
+]
