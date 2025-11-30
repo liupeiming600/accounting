@@ -52,11 +52,15 @@ accounting/
 ├── config/
 │   ├── accounts.csv        # 账户定义
 │   ├── categories.csv      # 消费分类
-│   └── credit_cards.csv    # 信用卡详情
+│   ├── credit_cards.csv    # 信用卡详情（含返点率）
+│   └── reward_rates.csv    # 支付方式默认返点率
 │
 ├── accounts/
 │   ├── balances.csv        # 当前余额快照
-│   └── transactions.csv    # 【核心】所有交易记录
+│   └── transactions/       # 交易记录（按月份分文件）
+│       ├── 2025-11.csv
+│       ├── 2025-12.csv
+│       └── ...
 │
 ├── inventory/
 │   ├── items.csv           # 库存商品
@@ -374,13 +378,13 @@ poi/
 2. Claude标准化后写入`2025/MM.csv`
 
 ### 添加転売交易
-1. **转换**（充值）：记录到`accounts/transactions.csv`（类型=转换）
+1. **转换**（充值）：记录到`accounts/transactions/YYYY-MM.csv`（类型=转换）
 2. **仕入**（进货）：
-   - 记录到`accounts/transactions.csv`（类型=仕入）
+   - 记录到`accounts/transactions/YYYY-MM.csv`（类型=仕入）
    - 添加到`inventory/items.csv`
    - 添加到`inventory/movements.csv`
 3. **販売**（出货）：
-   - 记录到`accounts/transactions.csv`（类型=販売）
+   - 记录到`accounts/transactions/YYYY-MM.csv`（类型=販売）
    - 更新`inventory/items.csv`状态
    - 添加到`inventory/movements.csv`
 
@@ -389,7 +393,7 @@ poi/
 2. 添加步骤：`poi/YYYY-MM/steps.csv`（关联交易ID）
 3. 返点到账时：
    - 更新事件状态
-   - 添加返点交易到`accounts/transactions.csv`
+   - 添加返点交易到`accounts/transactions/YYYY-MM.csv`
 
 ### 更新账户余额
 直接编辑`accounts/balances.csv`，更新日期
