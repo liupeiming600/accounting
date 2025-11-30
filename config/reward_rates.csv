@@ -1,0 +1,21 @@
+账户ID,账户名称,默认返点率,返点类型,特殊返点,备注
+MITSUI_NL,三井NL,0.5%,Vポイント,対象のコンビニ・飲食店9%,基本只在特殊返点场景使用
+MITSUI_BIZ,三井事业卡,0.5%,Vポイント,,
+ANA_GOLD,ANA Gold,1%,Vポイント(ANA),ANA航空券1.5%,1000円=10pt/只能换ANAマイル
+AMAZON_MASTER,Amazon Mastercard,1%,Amazon积分,Amazon(Prime)2%,
+AMEX_GOLD,Amex Gold,1%,Membership Rewards,Amazon3%自动/Starbucksオンライン入金20%(半年上限2500円),100円=1MR/スタバ要事前登録
+EPOS,Epos Card,0.5%,エポスポイント,選べるショップ3倍,
+SAISON_GOLD_PREMIUM,Saison Gold Premium,0.5%,永久不滅ポイント,対象コンビニ最大5%,1000円=1pt(=5円相当)
+SAISON_AMEX,Saison Amex Gold,0.75%,永久不滅ポイント,,1000円=1.5pt
+VIEW_CARD,View Card,0.5%,JREポイント,Suicaチャージ1.5%,
+RAKUTEN_VISA,乐天Visa,1%,楽天ポイント,楽天市場SPU+,
+RAKUTEN_MASTER,乐天Master,1%,楽天ポイント,楽天市場SPU+,
+PAYPAY_CARD,PayPayカード,1%,PayPayポイント,Yahoo!ショッピング最大5%,単体利用時
+JCB_W,JCBカードW,1%,Oki Dokiポイント,Amazon/セブン2%,1pt=5円相当
+SUICA,Suica,0%,,,チャージ元のカードで返点
+PAYPAY,PayPay(PayPayカード),1.5%,PayPayポイント,条件達成で2%,PayPay内でPayPayカード決済時
+RAKUTEN_PAY,乐天Pay,1%,楽天ポイント,楽天カード併用1.5%,
+JAL_PAY,JAL Pay,0.5%,JALマイル,,200円=1マイル
+ANA_PAY,ANA Pay,0.5%,ANAマイル,,200円=1マイル
+WAON,WAON,0.5%,WAON POINT,イオン系1%,200円=1pt
+AEON_PAY,AEON Pay,0.5%,WAON POINT,イオン系1%+キャンペーン,

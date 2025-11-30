@@ -62,9 +62,14 @@ accounting/
 │   ├── items.csv           # 库存商品
 │   └── movements.csv       # 库存进出记录
 │
-├── poi/
-│   ├── events.csv          # POI事件主表
-│   └── steps.csv           # 事件步骤明细
+├── poi/                    # POI活动（按活动开始月份分目录）
+│   ├── 2025-11/
+│   │   ├── events.csv      # 11月开始的事件
+│   │   └── steps.csv       # 步骤明细
+│   ├── 2025-12/
+│   │   ├── events.csv      # 12月开始的事件
+│   │   └── steps.csv       # 步骤明细
+│   └── ...
 │
 ├── business/
 │   ├── README.md           # 业务系统说明
@@ -178,6 +183,19 @@ accounting/
 
 ## POI活动系统
 
+### 目录结构
+POI活动按**活动开始月份**分目录管理：
+```
+poi/
+├── 2025-11/
+│   ├── events.csv    # 11月开始的活动
+│   └── steps.csv     # 步骤明细
+├── 2025-12/
+│   ├── events.csv    # 12月开始的活动
+│   └── steps.csv     # 步骤明细
+└── ...
+```
+
 ### 事件类型
 - **充值**：充值获得返点（如便利店Apple Gift Card 10%）
 - **消费**：消费达标获得返点（如Amazon黑五活动）
@@ -189,20 +207,27 @@ accounting/
 ```
 
 ### 文件说明
-- `poi/events.csv`：事件主表
+- `events.csv`：事件主表
   - 包含：事件ID、名称、类型、渠道、URL、规则说明、预计返点等
-- `poi/steps.csv`：步骤明细
+- `steps.csv`：步骤明细
   - 包含：步骤描述、状态、关联交易ID
 
-### 当前待返点（2025-11-30）
-| 事件 | 预计返点 | 形式 |
-|------|----------|------|
-| Ministop Apple充值10% | ¥10,000 | Apple Gift Card |
-| 7-11 Apple充值10% | ¥10,000 | Apple Gift Card |
-| FamilyMart Apple充值10% | ¥4,000 | Apple Gift Card |
-| Amazon黑五积分 | ¥10,000 | Amazon积分 |
-| Amazon Prime 5% | ¥5,000 | Amazon积分 |
-| 楽天ブックス3.5% | ¥5,249 | 楽天ポイント |
+### 当前活动（2025-12-01）
+
+#### 进行中
+| 事件 | 类型 | 目标 | 进度 | 预计返点 |
+|------|------|------|------|----------|
+| JCB スマリボ | リボ | ¥300,000 | ¥138,001 (46%) | ¥30,000 |
+
+#### 待返点
+| 事件 | 预计返点 | 形式 | 预计时间 |
+|------|----------|------|----------|
+| Ministop Apple充值10% | ¥10,000 | Apple Gift Card | 12月下旬 |
+| 7-11 Apple充值10% | ¥10,000 | Apple Gift Card | 12月下旬 |
+| FamilyMart Apple充值10% | ¥4,000 | Apple Gift Card | 12月下旬 |
+| Amazon黑五积分 | ¥10,000 | Amazon积分 | 12月 |
+| Amazon Prime 5% | ¥5,000 | Amazon积分 | 12月 |
+| 楽天ブックス3.5% | ¥5,249 | 楽天ポイント | 12月 |
 
 ---
 
@@ -280,7 +305,7 @@ accounting/
 
 ---
 
-## 账户余额快照（2025-11-30）
+## 账户余额快照（2025-12-01）
 
 ### 现金 & 人民币
 | 账户 | 余额 |
@@ -303,9 +328,9 @@ accounting/
 | Suica | ¥12,945 |
 | PayPay | ¥923 |
 | 乐天Pay | ¥75,237 |
-| JAL Pay | ¥50,001 |
+| JAL Pay | ¥80,000 |
 | WAON | ¥4,523 |
-| ANA Pay | ¥1,298 |
+| ANA Pay | ¥21,299 |
 | AU Pay | ¥0 |
 | nanaco | ¥0 |
 | Apple | ¥25,400 |
@@ -360,8 +385,8 @@ accounting/
    - 添加到`inventory/movements.csv`
 
 ### 添加POI事件
-1. 创建事件：`poi/events.csv`（含URL、规则说明）
-2. 添加步骤：`poi/steps.csv`（关联交易ID）
+1. 在对应月份目录创建/更新：`poi/YYYY-MM/events.csv`（含URL、规则说明）
+2. 添加步骤：`poi/YYYY-MM/steps.csv`（关联交易ID）
 3. 返点到账时：
    - 更新事件状态
    - 添加返点交易到`accounts/transactions.csv`
@@ -371,4 +396,4 @@ accounting/
 
 ---
 
-*最后更新：2025-11-30*
+*最后更新：2025-12-01*

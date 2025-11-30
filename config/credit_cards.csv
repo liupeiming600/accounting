@@ -1,19 +1,19 @@
-卡片ID,卡片名称,全名,締め日,引落日,引落口座,备注
-MITSUI_NL,三井NL,三井住友ゴールドM NL,月末,翌月26日,三井住友,
-MITSUI_BIZ,三井事业卡,オーナーズM（NL）,月末,翌月26日,三井住友,
-ANA_GOLD,ANA Gold,ANAマスターゴールド,15日,翌月10日,三井住友,
-AMAZON_MASTER,Amazon Mastercard,Amazon マスター,月末,翌月26日,三井住友,
-AMEX_GOLD,Amex Gold,アメリカン・エキスプレス・ゴールド・プリファード・カード,7日,当月26日,三井住友,
-EPOS,Epos Card,エポスゴールドカード,27日,翌月27日,三井住友,
-SAISON_GOLD_PREMIUM,Saison Gold Premium,SAISON GOLD Premium,10日,翌月4日,三井住友,
-SAISON_AMEX,Saison Amex Gold,セゾンゴールド・アメリカン・エキスプレス・カード,10日,翌月4日,三井住友,很久没用
-VIEW_CARD,View Card,ビックカメラSuicaカード,5日,翌月4日,三井住友,
-RAKUTEN_VISA,乐天Visa,楽天カード(Visa),月末,翌月27日,三井住友,
-RAKUTEN_MASTER,乐天Master,楽天カード(Mastercard),月末,翌月27日,三井住友,
-PAYPAY_CARD,PayPayカード,PayPayカード,月末,翌月27日,三井住友,
-JCB_W,JCBカードW,JCBカードWL NL,15日,翌月10日,三井住友,
-OLIVE,Olive,Olive フレキシブルペイ,,,三井住友,不常用
-DMM_JCB,DMM JCB,DMM JCBカード,,,三井住友,不常用/SAISON
-JQ_SAISON,JQ CARD,JQ CARDセゾン,,,三井住友,不常用
-CINEMALAGE,シネマイレージ,シネマイレージカード セゾン,,,三井住友,不常用/SAISON
-SEVEN_PLUS,セブンカード,セブンカード・プラス(JCB),,,三井住友,不常用
+卡片ID,卡片名称,全名,締め日,引落日,引落口座,返点,备注
+MITSUI_NL,三井NL,三井住友ゴールドM NL,月末,翌月26日,三井住友,0.5%Vpt/コンビニ飲食店9%,基本只在特殊返点时使用
+MITSUI_BIZ,三井事业卡,オーナーズM（NL）,月末,翌月26日,三井住友,0.5%Vpt,
+ANA_GOLD,ANA Gold,ANAマスターゴールド,15日,翌月10日,三井住友,1%Vpt(ANA)/航空券1.5%,只能换ANAマイル
+AMAZON_MASTER,Amazon Mastercard,Amazon マスター,月末,翌月26日,三井住友,1%Amazonpt/Amazon(Prime)2%,
+AMEX_GOLD,Amex Gold,アメリカン・エキスプレス・ゴールド・プリファード・カード,7日,当月26日,三井住友,1%MR/Amazon3%/スタバ20%,スタバオンライン入金半年上限2500円
+EPOS,Epos Card,エポスゴールドカード,27日,翌月27日,三井住友,0.5%エポスpt/選べるショップ3倍,
+SAISON_GOLD_PREMIUM,Saison Gold Premium,SAISON GOLD Premium,10日,翌月4日,三井住友,0.5%永久不滅pt/コンビニ最大5%,
+SAISON_AMEX,Saison Amex Gold,セゾンゴールド・アメリカン・エキスプレス・カード,10日,翌月4日,三井住友,0.75%永久不滅pt,很久没用
+VIEW_CARD,View Card,ビックカメラSuicaカード,5日,翌月4日,三井住友,0.5%JREpt/Suicaチャージ1.5%,
+RAKUTEN_VISA,乐天Visa,楽天カード(Visa),月末,翌月27日,三井住友,1%楽天pt/楽天市場SPU+,
+RAKUTEN_MASTER,乐天Master,楽天カード(Mastercard),月末,翌月27日,三井住友,1%楽天pt/楽天市場SPU+,
+PAYPAY_CARD,PayPayカード,PayPayカード,月末,翌月27日,三井住友,1%PayPaypt/Yahoo!最大5%,PayPay内決済1.5%~2%
+JCB_W,JCBカードW,JCBカードWL NL,15日,翌月10日,三井住友,1%OkiDoki/Amazon・セブン2%,1pt=5円相当
+OLIVE,Olive,Olive フレキシブルペイ,,,三井住友,,不常用
+DMM_JCB,DMM JCB,DMM JCBカード,,,三井住友,,不常用/SAISON
+JQ_SAISON,JQ CARD,JQ CARDセゾン,,,三井住友,,不常用
+CINEMALAGE,シネマイレージ,シネマイレージカード セゾン,,,三井住友,,不常用/SAISON
+SEVEN_PLUS,セブンカード,セブンカード・プラス(JCB),,,三井住友,,不常用
