@@ -1,0 +1,58 @@
+账户ID,账户名称,类型,币种,备注
+CASH_JPY,现金,现金,JPY,
+WECHAT,微信钱包,电子钱包,RMB,
+ALIPAY,支付宝,电子钱包,RMB,
+HUABEI,花呗,信用,RMB,待还款
+MITSUI_BANK,三井住友银行,银行,JPY,主账户
+MUFG_BANK,三菱UFJ银行,银行,JPY,
+RAKUTEN_BANK,乐天银行,银行,JPY,
+MIZUHO_BANK,みずほ银行,银行,JPY,
+MITSUI_NL,三井NL,信用卡,JPY,Visa
+MITSUI_BIZ,三井事业卡,信用卡,JPY,事业用
+ANA_GOLD,ANA Gold,信用卡,JPY,ANA Mastercard
+AMEX_GOLD,Amex Gold,信用卡,JPY,
+EPOS,Epos Card,信用卡,JPY,
+SAISON_GOLD_PREMIUM,Saison Gold Premium,信用卡,JPY,
+SAISON_AMEX,Saison Amex Gold,信用卡,JPY,很久没用
+VIEW_CARD,View Card,信用卡,JPY,
+RAKUTEN_VISA,乐天Visa,信用卡,JPY,
+RAKUTEN_MASTER,乐天Master Card,信用卡,JPY,
+AMAZON_MASTER,Amazon Mastercard,信用卡,JPY,
+PAYPAY_CARD,PayPayカード,信用卡,JPY,
+JCB_W,JCBカードW,信用卡,JPY,
+OLIVE,Olive,信用卡,JPY,不常用
+DMM_JCB,DMM JCBカード,信用卡,JPY,不常用
+JQ_SAISON,JQ CARDセゾン,信用卡,JPY,不常用
+CINEMALAGE,シネマイレージカード,信用卡,JPY,不常用
+SEVEN_PLUS,セブンカード・プラス,信用卡,JPY,不常用
+SUICA,Suica,电子钱包,JPY,
+PAYPAY,PayPay,电子钱包,JPY,
+RAKUTEN_PAY,乐天Pay,电子钱包,JPY,
+JAL_PAY,JAL Pay,电子钱包,JPY,
+WAON,WAON,电子钱包,JPY,
+ANA_PAY,ANA Pay,电子钱包,JPY,
+AU_PAY,AU Pay,电子钱包,JPY,
+NANACO,nanaco,电子钱包,JPY,
+APPLE,Apple Account,储值账户,JPY,Apple ID余额
+PASELI,Paseli,储值账户,JPY,游戏用
+PASELI_POINT,Paseliポイント,积分,JPY,
+SBI_STOCK,SBI証券-国内株式,证券,JPY,現物
+SBI_FUND,SBI証券-投資信託,证券,JPY,
+SBI_CASH,SBI証券-預り金,证券,JPY,
+RAKUTEN_STOCK,乐天証券-国内株式,证券,JPY,
+RAKUTEN_FUND,乐天証券-投資信託,证券,JPY,
+RAKUTEN_CASH,乐天証券-預り金,证券,JPY,
+RAKUTEN_FX,乐天証券-FX証拠金,证券,JPY,純資産
+RAKUTEN_CFD,乐天証券-CFD,证券,JPY,純資産
+AMAZON_POINT,Amazon积分,积分,JPY,1pt=1円
+RAKUTEN_POINT,楽天ポイント,积分,JPY,1pt=1円
+PAYPAY_POINT,PayPayポイント,积分,JPY,運用中
+JAL_MILES,JALマイル,里程,JPY,
+ANA_MILES,ANAマイル,里程,JPY,
+WAON_POINT,WAONポイント,积分,JPY,
+PONTA_POINT,Pontaポイント,积分,JPY,
+V_POINT,Vポイント,积分,JPY,
+V_POINT_ANA,Vポイント(ANA移行可),积分,JPY,ANAマイレージ移行可能
+D_POINT,dポイント,积分,JPY,
+JRE_POINT,JREポイント,积分,JPY,
+NANACO_POINT,nanacoポイント,积分,JPY,

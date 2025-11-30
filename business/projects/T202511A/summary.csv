@@ -1,0 +1,22 @@
+项目,T202511A
+名称,iPhone17転売+Switch+PS5
+类型,転売
+开始日期,2025-11-26
+状态,进行中
+
+=== 关联数据 ===
+数据类型,查询条件,文件位置
+交易记录,项目ID=T202511A,accounts/transactions.csv
+库存商品,项目ID=T202511A,inventory/items.csv
+库存变动,关联交易ID含T202511A,inventory/movements.csv
+POI事件,"POI202511B-G",poi/events.csv
+
+=== 汇总（需从transactions计算）===
+项目,说明
+仕入成本,SUM(类型=仕入 AND 项目ID=T202511A)
+販売收入,SUM(类型=販売 AND 项目ID=T202511A)
+关联返点,SUM(POI202511B~G的返点)
+
+=== 当前状态 ===
+库存,7件商品待收货/待入荷
+返点,24000+10000+5249=39249待返点 + 9355已到账
