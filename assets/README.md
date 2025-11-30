@@ -93,7 +93,7 @@ assets/
 
 ### 第2步：计算上月收支
 
-从账本中统计上个月的：
+从 `accounts/transactions.csv` 中筛选上个月的交易（按账户币种折算自身币种，不混算 JPY/RMB），统计：
 - 总收入（JPY + RMB）
 - 总支出（JPY + RMB）
 - 净收支（收入 - 支出）
