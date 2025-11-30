@@ -12,10 +12,9 @@
 - `read_excel.py` / `read_excel2.py`：查看 Excel 列结构/样本数据的探查脚本。
 
 当前保留内容
-- 月度 CSV：`2025/*.csv`（UTF-8 BOM）。
-- 月度收件箱：`2025/10/inbox.md`。
-- 规则与说明：`README.md`、`notes/rules.md`。
-- 汇总入口：`ledger.csv`（空表头已建，按需合并各月 CSV）。
+- 核心设计与数据：`SYSTEM_README.md`、`README.md`、`PROJECT_LOG.md`、`notes/rules.md`，以及唯一流水表 `accounts/transactions.csv`。
+- 辅助模块：`config/`（账户/分类/信用卡）、`inventory/`（库存）、`poi/`（积分返点）、`business/`（项目）。
+- 历史月度视图：`2025/*.csv`、`ledger.csv` 与 `2025/10/inbox.md`，仅供回溯或双写参考（均为 UTF-8 BOM）。
 
 编码约定
 - CSV：UTF-8 with BOM；Markdown/代码：UTF-8。

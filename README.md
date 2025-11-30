@@ -1,41 +1,49 @@
-# Accounting 个人记账
+# Accounting / 个人财务系统
 
-项目用于按月记录与管理个人收支数据，并在需要时汇总生成总账与月度统计。
+以 `SYSTEM_README.md` 为蓝本的综合财务管理仓库，涵盖日常收支、账户余额、信用卡、転売项目、积分返点（POI）与库存。核心单一数据源为 `accounts/transactions.csv`，其他模块围绕该流水展开。
 
-结构
-- `2025/MM.csv` 月度标准化数据文件，例如 `2025/10.csv`。
-- `2025/MM/inbox.md` 月度收件箱，用于临时记录未清洗/未归档流水。
-- `notes/rules.md` 记账规则与约定。
-- `ledger.csv` 总账（所有月份合并后，可按需生成）。
-- `ARCHIVE.md` 清理说明与历史记录摘要（不保留冗余脚本的代码，仅保留信息）。
- - `tools/` 脚本工具（CSV 为主的流水线）：
-   - `merge_ledger.py` 合并 `2025/*.csv` → `ledger.csv`（排序、去重、校验）。
-   - `summarize_month.py` 生成 `summary_by_*.csv`（分类/账户/币种）。
-   - `add_record.py` 追加单条记录到对应月份 CSV。
-   - `ensure_bom.py` 统一 BOM 编码。
+## 目录与核心文件
+```
+accounting/
+├── config/              # 账户、分类、信用卡定义
+├── accounts/
+│   ├── transactions.csv # 【核心】所有资金流动：消费/收入/转换/转账/仕入/販売/返点
+│   └── balances.csv     # 账户余额快照
+├── inventory/           # 库存商品与进出记录（支撑仕入/販売）
+├── poi/                 # 积分返点事件与步骤
+├── business/            # 项目索引与项目级汇总
+├── 2025/                # 2025 年日常消费历史 CSV（口语化输入产物）
+└── SYSTEM_README.md     # 系统设计总览（权威说明）
+```
 
-工作流
-1. 将零散流水先记到对应月份的 `inbox.md`。
-2. 整理并清洗为标准化行，写入 `2025/MM.csv`（UTF-8 含 BOM）。
-3. 运行 `python tools/summarize_month.py 2025/10.csv` 生成 `summary_by_*.csv`。
-4. 需要总账时，运行 `python tools/merge_ledger.py` 合并为 `ledger.csv`。
+## 交易模型
+- **类型与资金流**：
+  | 类型 | 从账户 | 到账户 | 说明 |
+  |------|--------|--------|------|
+  | 消费 | 有 | 空 | 日常支出 |
+  | 收入 | 空 | 有 | 工资、麻将收入等 |
+  | 转换 | 有 | 有 | 余额 A→余额 B（充值/换钱包）|
+  | 转账 | 有 | 有 | 还信用卡、账户间转账 |
+  | 仕入 | 有 | 空 | 余额→库存（进货）|
+  | 販売 | 空 | 有 | 库存→余额（出货）|
+  | 返点 | 空 | 有 | POI 返点到账 |
 
-示例命令
-- 追加一条记录：
-  `python tools/add_record.py --date 2025-10-08 --type 支出 --category 外食 --amount 520 --currency JPY --account Amex Gold --merchant  --note 午餐`
-- 生成 10 月汇总（写入 `2025/10/summary_by_*.csv`）：
-  `python tools/summarize_month.py 2025/10.csv`
-- 合并总账：
-  `python tools/merge_ledger.py`
+- **数据流**：账户余额 ──仕入──► 库存 ──販売──► 账户余额；转换用于账户/钱包间互转，POI 为附加收益。
+- **单一来源**：所有资金流记录在 `accounts/transactions.csv`（字段：交易ID、日期、类型、从账户、到账户、金额、关联库存ID、关联事件ID、项目ID、备注）。
 
-数据格式（CSV）
-- 列顺序：`日期, 类型, 分类, 金额, 币种, 账户, 商户, 备注`
-- 示例：`2025-10-01, 支出, 外食, 1100, JPY, 现金, , `
+## 主要工作流
+- **日常消费/收入**：将口语化流水标准化后写入 `accounts/transactions.csv`；2025 年的历史明细可继续放在 `2025/MM.csv` 作为补充视图。
+- **転売/库存**：转换（充值）、仕入（进货）、販売（出货）均写入 `accounts/transactions.csv`；同步更新 `inventory/items.csv` 与 `inventory/movements.csv`。
+- **POI 活动**：在 `poi/events.csv` 记录规则与预期，在 `poi/steps.csv` 追踪步骤与关联交易；返点到账后写入 `accounts/transactions.csv` 并更新状态。
+- **项目汇总**：业务项目列表见 `business/projects/index.csv`，具体项目（如 `T202511A`）在对应子目录下维护汇总。
+- **账户余额**：快照保存在 `accounts/balances.csv`，更新时注明日期。
 
-编码约定
-- CSV：UTF-8 with BOM（`utf-8-sig`）。
-- Markdown/代码：UTF-8（无 BOM）。
-- Windows 控制台建议设置：`$OutputEncoding = [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false)` 以避免显示乱码。
+## 编码与规范
+- CSV 统一使用 UTF-8 with BOM；Markdown/代码使用 UTF-8（无 BOM）。
+- 账户/分类/信用卡 ID 参考 `config/` 下的定义，保持命名一致；交易类型遵循上表，不将「转换」混淆为「仕入」。
+- 币种以交易所属账户的币种为准，金额为正数；转账/转换为中性流动，返点独立记录。
+- 月度文件与旧版脚本（`tools/`）主要服务 2025 日常消费记录，若继续使用请确保表头为 `日期, 类型, 分类, 金额, 币种, 账户, 商户, 备注` 且编码为 UTF-8 BOM。
 
-规则与约定
-- 详见 `notes/rules.md`。
+## 参考
+- 详细账户/信用卡列表、项目与库存/POI 现状见 `SYSTEM_README.md`。
+- 业务子系统概览：`business/README.md`。
