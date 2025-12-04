@@ -1,9 +1,16 @@
 商品ID,商品名称,单位成本,入库日期,来源,项目ID,状态,售价,备注
-INV001,iPhone17 256GB (Amazon),129800,2025-11-26,Amazon,T202511A,待收货,136500,
-INV002,iPhone17 256GB (Apple),129800,2025-11-28,Apple Store,T202511A,待收货,136500,第1台
-INV003,iPhone17 256GB (Apple),129800,2025-11-28,Apple Store,T202511A,待收货,136500,第2台
+INV001,iPhone17 256GB (Amazon),129800,2025-11-26,Amazon,T202511A,已售,129300,
+INV002,iPhone17 256GB (Apple),129800,2025-11-28,Apple Store,T202511A,已售,129300,第1台
+INV003,iPhone17 256GB (Apple),129800,2025-11-28,Apple Store,T202511A,已售,129300,第2台
 INV004,iPhone17 256GB (Apple),129800,2025-11-28,Apple Store,T202511A,待收货,136500,第3台
 INV005,Switch OLED,37970,2025-11-27,Amazon,T202511A,待收货,待定,
 INV006,PS5 Pro,101587,2025-11-23,楽天ブックス,T202511A,待入荷,待定,入荷次第発送 (原价104980-coupon分摊)
 INV007,PSVR2 Horizon同梱版,48373,2025-11-23,楽天ブックス,T202511A,待入荷,待定,入荷次第発送 (原价49980-coupon分摊)
 INV008,iPhone17 Pro Max 256GB ディープブルー,194800,2025-11-30,Apple Store,T202511A,待收货,待定,
+INV009,Nintendo Switch 2,48373,2025-12-01,AliExpress,T202511A,待收货,待定,ANA Gold支付
+INV010,Nintendo Switch OLED ネオン,37980,2025-12-03,Amazon,T202511A,待收货,待定,36000Amazon残高+1980MC
+INV011,Nintendo Switch ネオン,32970,2025-12-03,Amazon,T202511A,待收货,待定,16440pt+16530MC
+INV012,Instax フィルム Rainbow,1115,2025-12-03,Amazon,T202511A,待收货,待定,
+INV013,Instax フィルム Kitty,901,2025-12-03,Amazon,T202511A,待收货,待定,
+INV014,PlayStation 5 Slim CFI-2000A01,64616,2025-12-04,AliExpress,T202511A,待收货,待定,PayPayカード
+INV015,Nintendo Switch OLED ホワイト,37979,2025-12-04,楽天,T202511A,待收货,待定,楽天Master

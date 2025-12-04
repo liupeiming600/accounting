@@ -14,7 +14,7 @@ PAYPAY_CARD,PayPayカード,1%,PayPayポイント,Yahoo!ショッピング最大
 JCB_W,JCBカードW,1%,Oki Dokiポイント,Amazon/セブン2%,1pt=5円相当
 SUICA,Suica,0%,,,チャージ元のカードで返点
 PAYPAY,PayPay(PayPayカード),1.5%,PayPayポイント,条件達成で2%,PayPay内でPayPayカード決済時
-RAKUTEN_PAY,乐天Pay,1%,楽天ポイント,楽天カード併用1.5%,
+RAKUTEN_PAY,乐天Pay,1.5%,楽天ポイント,部分商家0%,楽天カード経由
 JAL_PAY,JAL Pay,0.5%,JALマイル,,200円=1マイル
 ANA_PAY,ANA Pay,0.5%,ANAマイル,,200円=1マイル
 WAON,WAON,0.5%,WAON POINT,イオン系1%,200円=1pt
